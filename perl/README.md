@@ -1,5 +1,10 @@
 # Perl Junk Code
 
+# CSV column sorting
+
+   ./csv-sort.pl < test.csv
+   ./csv-sort.pl reverse-columns < test.csv
+
 # Text encodings
 
     diff -u pangram-de.latin1 pangram-de.utf8
