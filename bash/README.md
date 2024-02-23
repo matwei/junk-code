@@ -1,5 +1,24 @@
 # Bash Junk Code
 
+## Editing text
+
+### Activate / deactivate a line
+
+Try it out:
+
+```
+./activate-line.bash
+Usage: ./activate-line.bash ( a | d ) [ file [ line [ comment ]]]
+```
+
+The script needs at least the first argument ('a' or 'd').
+It will either activate (or insert) the line in the file
+or deactivate it by prepending it with the comment.
+
+Default file is *test.txt*,
+default line is *"this.line.is.active = true"*,
+default comment is *"#"*.
+
 ## Synchronisation
 
 ### Wait for Process listening at a TCP port
