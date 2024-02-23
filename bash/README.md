@@ -19,6 +19,16 @@ Default file is *test.txt*,
 default line is *"this.line.is.active = true"*,
 default comment is *"#"*.
 
+## Options
+
+Try it out:
+
+```
+./get-options.bash -h
+./get-options.bash cmd -h
+./get-options.bash -g gopt cmd -c copt
+```
+
 ## Synchronisation
 
 ### Wait for Process listening at a TCP port
