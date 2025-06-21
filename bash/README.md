@@ -29,6 +29,22 @@ Try it out:
 ./get-options.bash -g gopt cmd -c copt
 ```
 
+## My IP address
+
+I use this like this to distinguish between cloned machines
+that have different IP addresses.
+
+```
+if ./i-have-address.bash a.b.c.d; then echo "yes"; else echo "no"; fi
+```
+
+or
+
+```
+source ./i-have-address.bash
+if i_have_address a.b.c.d; then echo "yes"; else echo "no"; fi
+```
+
 ## Synchronisation
 
 ### Wait for Process listening at a TCP port
