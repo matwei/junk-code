@@ -44,6 +44,15 @@ or
 source ./i-have-address.bash
 if i_have_address a.b.c.d; then echo "yes"; else echo "no"; fi
 ```
+## Setup Git configuration
+
+```
+Usage: ./setup-git.bash [ -h ] [ -e <email address> ] [ -n <user name> ]
+ -d         - dry run
+ -e <email> - use this as email address
+ -h         - show this help
+ -n <name>  - use this as username
+```
 
 ## Synchronisation
 
