@@ -8,10 +8,12 @@ ALIASES=(
 )
 
 function run_this {
-  echo "run: $*"
+  local cmd=$1
+  shift
+  echo "run: $cmd $@"
   # shellcheck disable=SC2048
   if [[ -z "$DRYRUN" ]]; then
-    $*
+    $cmd "$@"
   fi
 } # run_this()
 
@@ -58,14 +60,14 @@ function set_aliases {
 } # set_aliases()
 
 function set_user {
-  run_this "git config --global user.name '$GITUSERNAME'"
-  run_this "git config --global user.email '$GITUSEREMAIL'"
+  run_this git config --global user.name '$GITUSERNAME'
+  run_this git config --global user.email '$GITUSEREMAIL'
 } # set_username()
 
 function set_misc {
-  run_this "git config --global credential.helper 'cache --timeout 3600'"
-  run_this "git config --global core.editor 'vim'"
-  run_this "git config --global init.defaultbranch 'main'"
+  run_this git config --global credential.helper 'cache --timeout 3600'
+  run_this git config --global core.editor 'vim'
+  run_this git config --global init.defaultbranch 'main'
 } # set_misc()
 
 function setup_git {
