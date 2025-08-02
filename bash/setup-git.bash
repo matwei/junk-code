@@ -60,8 +60,8 @@ function set_aliases {
 } # set_aliases()
 
 function set_user {
-  run_this git config --global user.name '$GITUSERNAME'
-  run_this git config --global user.email '$GITUSEREMAIL'
+  run_this git config --global user.name "$GITUSERNAME"
+  run_this git config --global user.email "$GITUSEREMAIL"
 } # set_username()
 
 function set_misc {
