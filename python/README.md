@@ -30,3 +30,24 @@ positional arguments:
 options:
   -h, --help  show this help message and exit
 ```
+
+## Find default config file
+
+```
+./xdg_config -h
+usage: xdg_config.py [-h] [--config CONFIG]
+
+options:
+  -h, --help            show this help message and exit
+  --config CONFIG, -c CONFIG
+                        name of config file
+```
+
+This script searches for a config file in these places (first one wins):
+
+1. File with pathname given in `--config` option.
+2. File named *.config.ini* in current directory (note the prepended dot).
+3. File named *config.ini* in `$XDG_CONFIG_HOME`.
+4. First file named *config.ini* in any of the directories in `$XDG_CONFIG_DIRS`.
+
+If it can't find a config file, the scripts exits with an error message.
