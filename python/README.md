@@ -31,6 +31,26 @@ options:
   -h, --help  show this help message and exit
 ```
 
+## Find cycles in directed graph from a dot file (*find_color_cycles.py*)
+
+This one was written by the Bing AI agent.
+
+I use it to analyze the output of `systemd-analyze dot ...`
+while searching for cycling dependencies in systemd configuration.
+
+The AI agent even wrote a small test graph (*test_graph.dot*).
+
+```shell
+./find_color_cycles.py test_graph.dot
+
+Cycles for color 'red':
+A -> B -> C -> A
+
+Cycles for color 'blue':
+X -> Y -> Z -> X
+Cycle-highlighted DOT file saved to: highlighted_color_cycles.dot
+```
+
 ## Find default config file
 
 ```
@@ -51,3 +71,4 @@ This script searches for a config file in these places (first one wins):
 4. First file named *config.ini* in any of the directories in `$XDG_CONFIG_DIRS`.
 
 If it can't find a config file, the scripts exits with an error message.
+

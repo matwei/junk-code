@@ -1,0 +1,20 @@
+digraph G {
+    // Red edges forming a cycle
+    A -> B [color=red];
+    B -> C [color=red];
+    C -> A [color=red];
+
+    // Blue edges forming a cycle
+    X -> Y [color=blue];
+    Y -> Z [color=blue];
+    Z -> X [color=blue];
+
+    // Green edges without a cycle
+    P -> Q [color=green];
+    Q -> R [color=green];
+
+    // Mixed colors (should not be detected as same-color cycle)
+    M -> N [color=red];
+    N -> O [color=blue];
+    O -> M [color=red];
+}
