@@ -2,7 +2,6 @@
 
 import argparse
 import configparser
-import json
 import sys
 
 from os.path import ( isfile, join as path_join )
@@ -26,6 +25,7 @@ def configure(args):
 
     if cf_name is not None:
         conf = configparser.ConfigParser()
+        print("Reading config from '{}'".format(cf_name), file=sys.stderr)
         conf.read(cf_name)
     else:
         print('No config file given and none found', file=sys.stderr)
